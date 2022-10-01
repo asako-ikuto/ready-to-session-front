@@ -57,7 +57,7 @@ export default {
     strategies: {
       laravelApi: {
         provider: "laravel/sanctum",
-        url: "http://ready-to-session.com",
+        url: "http://api.ready-to-session.com",
         endpoints: {
           login: { url: "/login", method: "post" },
           logout: { url: "/logout", method: "post" },
@@ -70,7 +70,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "http://ready-to-session.com",
+    baseURL: "http://api.ready-to-session.com",
     credentials: true,
   },
 
