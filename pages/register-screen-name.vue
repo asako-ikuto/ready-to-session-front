@@ -8,6 +8,18 @@
           </v-col>
           <v-col cols="12">
             <v-text-field
+              v-model="name"
+              :rules="[rules.required, rules.name]"
+              :error="errors.name"
+              :error-messages="messages.name"
+              :counter="50"
+              label="ユーザ名"
+              prepend-icon="mdi-badge-account-horizontal-outline"
+              required
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12">
+            <v-text-field
               v-model="screenName"
               :rules="[rules.required, rules.screenName]"
               :error="errors.screen_name"
@@ -48,10 +60,12 @@ export default {
     this.$refs.registerScreenName.resetValidation();
   },
   data: () => ({
+    name: "",
     screenName: "",
     //バリデーション
     rules: {
       required: (value) => !!value || "入力必須",
+      name: (value) => (value && value.length <= 50) || "最大50文字までです",
       screenName: (value) =>
         /^.{4,15}$/.test(value) || "4文字以上15文字以下で入力してください",
     },
@@ -68,6 +82,7 @@ export default {
     registerScreenName() {
       if (this.$refs.registerScreenName.validate()) {
         this.$store.dispatch("registerScreenName", {
+          name: this.name,
           screenName: this.screenName,
         });
       }

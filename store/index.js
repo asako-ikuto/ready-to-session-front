@@ -109,6 +109,7 @@ export const actions = {
       await this.$axios.$get("/sanctum/csrf-cookie").then(async (res) => {
         const response = await this.$axios
           .$post("/register-screen-name", {
+            name: payload.name,
             screen_name: payload.screenName,
           })
           .then(async (res) => {
