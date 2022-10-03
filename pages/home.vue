@@ -124,9 +124,7 @@ export default {
   name: "HomePage",
   middleware: ["isauth"],
   async fetch() {
-    setTimeout(() => {
-      await this.$store.dispatch("playablelists/fetchPlayableListDetail");
-    }, 1000);
+    await this.$store.dispatch("playablelists/fetchPlayableListDetail");
   },
   data: () => ({
     searchText: "",
