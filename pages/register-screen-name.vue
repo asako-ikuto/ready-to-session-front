@@ -4,7 +4,7 @@
       <v-container>
         <v-row style="max-width: 500px" class="mx-auto text-center my-4">
           <v-col cols="12">
-            <p class="text-h4 font-weight-bold my-4">ユーザIDを設定</p>
+            <p class="text-h4 font-weight-bold my-4">ユーザ情報を設定</p>
           </v-col>
           <v-col cols="12">
             <v-text-field
