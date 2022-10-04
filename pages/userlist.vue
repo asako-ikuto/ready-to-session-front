@@ -10,7 +10,7 @@
           <v-text-field
             v-model="searchText"
             outlined
-            label="ユーザ名またはアカウントID"
+            label="ユーザ名またはユーザID"
             prepend-inner-icon="mdi-magnify"
           ></v-text-field>
         </v-col>
