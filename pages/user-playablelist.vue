@@ -99,7 +99,6 @@
                         <th class="text-left">曲名</th>
                         <th class="text-left">アーティスト名</th>
                         <th class="text-left">追加日</th>
-                        <th class="text-left"></th>
                       </tr>
                     </thead>
                     <tbody>
