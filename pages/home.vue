@@ -8,7 +8,7 @@
         </v-btn>
       </router-link>
       <v-col cols="12" class="text-center">
-        <p class="text-h4 font-weight-bold">演奏できる曲リスト</p>
+        <p class="text-h4 font-weight-bold">演奏できる曲リストtest</p>
       </v-col>
       <v-col cols="12">
         <v-text-field
