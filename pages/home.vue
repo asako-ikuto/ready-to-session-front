@@ -8,7 +8,7 @@
         </v-btn>
       </router-link>
       <v-col cols="12" class="text-center">
-        <p class="text-h4 font-weight-bold">演奏できる曲リストtest</p>
+        <p class="text-h4 font-weight-bold">演奏できる曲リストtest2</p>
       </v-col>
       <v-col cols="12">
         <v-text-field
@@ -20,15 +20,15 @@
       </v-col>
       <v-col cols="12" style="margin-bottom: 200px">
         <v-list two-line>
-          <template>
-            <v-list-item v-for="song in playableSongs" v-bind:key="song.id">
+          <template v-for="(song, index) in playableSongs">
+            <v-list-item :key="index">
               <v-list-item-content>
                 <v-list-item-title>{{ song.name }}</v-list-item-title>
-                <v-list-item-subtitle>{{
+                <!-- <v-list-item-subtitle>{{
                   song.artist_name
-                }}</v-list-item-subtitle>
+                }}</v-list-item-subtitle> -->
               </v-list-item-content>
-              <v-list-item-action>
+              <!-- <v-list-item-action>
                 <v-list-item-action-text>{{
                   $dateFns.format(new Date(song.updated_at), "yyyy.MM.dd")
                 }}</v-list-item-action-text>
@@ -44,7 +44,7 @@
                     </v-list-item>
                   </v-list>
                 </v-menu>
-              </v-list-item-action>
+              </v-list-item-action> -->
             </v-list-item>
           </template>
         </v-list>
@@ -124,7 +124,8 @@ export default {
   name: "HomePage",
   middleware: ["isauth"],
   async fetch() {
-    await this.$store.dispatch("playablelists/fetchPlayableListDetail");
+    // await this.$store.dispatch("playablelists/fetchPlayableListDetail");
+    await this.$store.dispatch("playablelists/fetchPlayableList");
   },
   data: () => ({
     searchText: "",
@@ -132,7 +133,8 @@ export default {
   computed: {
     playableSongs() {
       let songs = [];
-      const songList = this.$store.getters["playablelists/playableListDetail"];
+      // const songList = this.$store.getters["playablelists/playableListDetail"];
+      const songList = this.$store.getters["playablelists/playableList"];
       for (let i in songList) {
         let song = songList[i];
         if (
