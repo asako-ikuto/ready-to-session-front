@@ -8,7 +8,7 @@
         </v-btn>
       </router-link>
       <v-col cols="12" class="text-center">
-        <p class="text-h4 font-weight-bold">演奏できる曲リスト</p>
+        <p class="text-h4 font-weight-bold">演奏できる曲リスト8</p>
       </v-col>
       <v-col cols="12">
         <v-text-field
@@ -29,9 +29,9 @@
                 }}</v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-action>
-                <!-- <v-list-item-action-text>{{
+                <v-list-item-action-text>{{
                   $dateFns.format(new Date(song.updated_at), "yyyy.MM.dd")
-                }}</v-list-item-action-text> -->
+                }}</v-list-item-action-text>
                 <v-menu top>
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn v-bind="attrs" v-on="on" icon>

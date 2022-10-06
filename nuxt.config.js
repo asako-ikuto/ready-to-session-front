@@ -33,6 +33,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
+    "@nuxtjs/date-fns",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,7 +41,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/auth-next",
     "@nuxtjs/axios",
-    "@nuxtjs/date-fns",
+    //"@nuxtjs/date-fns",
   ],
   auth: {
     redirect: {
