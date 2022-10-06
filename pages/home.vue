@@ -8,7 +8,7 @@
         </v-btn>
       </router-link>
       <v-col cols="12" class="text-center">
-        <p class="text-h4 font-weight-bold">演奏できる曲リストtest6</p>
+        <p class="text-h4 font-weight-bold">演奏できる曲リスト</p>
       </v-col>
       <v-col cols="12">
         <v-text-field
@@ -125,7 +125,6 @@ export default {
   middleware: ["isauth"],
   async fetch() {
     await this.$store.dispatch("playablelists/fetchPlayableListDetail");
-    // await this.$store.dispatch("playablelists/fetchPlayableList");
   },
   data: () => ({
     searchText: "",
@@ -134,7 +133,6 @@ export default {
     playableSongs() {
       let songs = [];
       const songList = this.$store.getters["playablelists/playableListDetail"];
-      // const songList = this.$store.getters["playablelists/playableList"];
       for (let i in songList) {
         let song = songList[i];
         if (
