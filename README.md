@@ -1,69 +1,45 @@
-# nuxtjs_frontend
+# Ready-to-session
 
-## Build Setup
+ミュージシャン（歌手や楽器演奏者など）が、自分が演奏可能な楽曲リストを作成し、お互いにシェアできるサービスです。<br>
+また、自分の演奏可能曲リストと、選択したユーザの演奏可能曲リストを比較し、一致する楽曲（すぐにセッションできる曲）をピックアップしてくれます。<br>
+お互いの演奏可能曲がすぐに把握できるので、ミュージシャン同士が組んで演奏する時の曲決めをスムーズに行うことができます。<br>
+レスポンシブ対応しているので、スマホからもご確認いただけます。
 
-```bash
-# install dependencies
-$ yarn install
+## URL
+https://ready-to-session.com <br>
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## バックエンド(Laravel)はこちら
+https://github.com/asako-ikuto/ready-to-session-api
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## 1.機能一覧
+- ユーザ登録、ログイン機能（Email、Twitter、Goodleログイン可能）
+- 登録機能
+  - 曲登録（管理者権限）
+  - アーティスト登録（管理者権限）
+- 一覧表示
+  - 曲一覧
+  - アーティスト一覧
+  - ユーザ一覧
+  - ユーザの演奏可能曲リスト一覧（自分、他のユーザ）
+- 編集・削除機能
+  - 曲編集・削除（管理者権限）
+  - アーティスト編集・削除（管理者権限）
+- 演奏可能曲登録・削除機能
+  - 曲一覧から演奏可能曲リストに追加・削除
+- 演奏可能曲比較機能
+  - 自分の演奏可能曲と、選択したユーザの演奏可能曲を比較、一致したものを表示
 
-# generate static project
-$ yarn generate
-```
+↓詳細はこちら<br>
+https://docs.google.com/spreadsheets/d/1LivSmoTkIhffaIimKDPSTkly_LgzpkRZyNFDS3Y0ZLw/edit?usp=sharing
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## 2.ワイヤーフレーム、画面遷移図
 
-## Special Directories
+https://www.figma.com/file/i7rv6o3yEHSZhF1s8WVPP6/Ready-to-Session-Wireframe?node-id=0%3A1
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## 3.DB設計図(ER図)
 
-### `assets`
+<img width="800" src="https://user-images.githubusercontent.com/59917584/194223679-378b4d63-051c-4d0b-aca5-a9cc791cd799.jpg">
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## 4.ネットワーク構成図
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<img width="800" src="https://user-images.githubusercontent.com/59917584/194223725-173d4d32-f6cc-489e-a7c3-c0f70e9a21c4.jpg">
