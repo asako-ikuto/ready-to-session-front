@@ -41,7 +41,6 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/auth-next",
     "@nuxtjs/axios",
-    //"@nuxtjs/date-fns",
   ],
   auth: {
     redirect: {
