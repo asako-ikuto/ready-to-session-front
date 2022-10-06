@@ -36,11 +36,6 @@
                         song.artist_name
                       }}</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-action>
-                      <v-list-item-action-text>{{
-                        $dateFns.format(song.updated_at, "yyyy.MM.dd")
-                      }}</v-list-item-action-text>
-                    </v-list-item-action>
                   </v-list-item>
                 </template>
               </v-col>
