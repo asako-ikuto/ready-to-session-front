@@ -147,7 +147,7 @@ export default {
   name: "UserSonglistPage",
   middleware: ["isauth"],
   async fetch() {
-    const userId = this.$store.getters["playablelists/userId"];
+    const userId = this.$route.query.id;
     await this.$store.dispatch("playablelists/showUserPlayableList", {
       userId: userId,
     });

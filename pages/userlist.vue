@@ -16,7 +16,7 @@
         </v-col>
         <v-col cols="12">
           <template v-for="(user, index) in filteredUsers" :search="searchText">
-            <v-list-item :key="index" @click="setUser(user.id, user.name)">
+            <v-list-item :key="index" @click="setUser(user.id)">
               <v-list-item-content>
                 <v-list-item-title>{{ user.name }}</v-list-item-title>
                 <v-list-item-subtitle>{{
@@ -65,7 +65,7 @@
                       class="px-10"
                       color="success"
                       rounded
-                      @click="setUser(user.id, user.name)"
+                      @click="setUser(user.id)"
                     >
                       <v-icon left>mdi-arrow-right-drop-circle-outline</v-icon
                       >演奏できる曲リスト
@@ -108,11 +108,8 @@ export default {
     },
   },
   methods: {
-    setUser(userId, userName) {
-      this.$store.dispatch("playablelists/setUser", {
-        userId: userId,
-        userName: userName,
-      });
+    setUser(userId) {
+      this.$router.push("/user-playablelist/?id=" + userId);
     },
   },
 };

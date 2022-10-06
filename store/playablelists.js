@@ -25,8 +25,9 @@ export const mutations = {
     state.userName = payload.userName;
     state.userId = payload.userId;
   },
-  setUserPlayableList(state, data) {
-    state.userPlayableList = data;
+  setUserPlayableList(state, payload) {
+    state.userPlayableList = payload.playable_list;
+    state.userName = payload.user_name;
   },
 };
 
