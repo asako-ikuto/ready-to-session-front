@@ -94,7 +94,7 @@
                 <td class="text-left">{{ song.name }}</td>
                 <td class="text-left">{{ song.artist_name }}</td>
                 <td class="text-left">
-                  {{ $dateFns.format(new Date(song.updated_at), "yyyy.MM.dd") }}
+                  {{ $dateFns.format(song.updated_at, "yyyy.MM.dd") }}
                 </td>
                 <td class="text-left">
                   <v-menu top>
