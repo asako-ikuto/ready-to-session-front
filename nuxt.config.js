@@ -52,7 +52,7 @@ export default {
     router: {
       mode: "hash",
       base: process.env.BASE_URL,
-      middleware: ["auth"],
+      // middleware: ["auth"],
     },
     strategies: {
       laravelApi: {
