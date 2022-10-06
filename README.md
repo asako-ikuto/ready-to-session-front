@@ -11,7 +11,7 @@ https://ready-to-session.com <br>
 ## バックエンド(Laravel)はこちら
 https://github.com/asako-ikuto/ready-to-session-api
 
-## 1.機能一覧
+## 機能一覧
 - ユーザ登録、ログイン機能（Email、Twitter、Goodleログイン可能）
 - 登録機能
   - 曲登録（管理者権限）
@@ -32,14 +32,36 @@ https://github.com/asako-ikuto/ready-to-session-api
 ↓詳細はこちら<br>
 https://docs.google.com/spreadsheets/d/1LivSmoTkIhffaIimKDPSTkly_LgzpkRZyNFDS3Y0ZLw/edit?usp=sharing
 
-## 2.ワイヤーフレーム、画面遷移図
+## ワイヤーフレーム、画面遷移図
 
 https://www.figma.com/file/i7rv6o3yEHSZhF1s8WVPP6/Ready-to-Session-Wireframe?node-id=0%3A1
 
-## 3.DB設計図(ER図)
+## DB設計図(ER図)
 
 <img width="800" src="https://user-images.githubusercontent.com/59917584/194223679-378b4d63-051c-4d0b-aca5-a9cc791cd799.jpg">
 
-## 4.ネットワーク構成図
+## ネットワーク構成図
 
 <img width="800" src="https://user-images.githubusercontent.com/59917584/194223725-173d4d32-f6cc-489e-a7c3-c0f70e9a21c4.jpg">
+
+## 技術構成
+SPA(Nuxt.js(Vue.js)) + API(Laravel) + RDS(MySQL)という形です。
+
+- フロントエンド
+  - Vue.js
+  - Nuxt.js
+  - vuetify
+- バックエンド
+  - PHP
+  - Laravel
+  - laradock
+- AWS
+  - VPC
+  - EC2
+  - RDS
+  - Route53
+  - Amplify
+- MySQL
+- Nginx
+- Docker/Docker-compose
+
